@@ -12,25 +12,25 @@
     <meta name="application-name" content="Inazuma" />
     <meta
       name="description"
-      content="Tailwind CSS Company Landing Page Template by Ranyeh."
+      content="Zerebralab"
     />
     <meta name="keywords" content="company" />
     <meta
       name="twitter:title"
-      content="Inazuma | Tailwind CSS Company Landing Page"
+      content="Zerebralab"
     />
     <meta
       name="twitter:description"
-      content="Tailwind CSS Company Landing Page Template by Ranyeh."
+      content="Zerebralab"
     />
     <meta name="twitter:image" content="/assets/img/inazuma-cover.png" />
     <meta
-      content="Inazuma | Tailwind CSS Company Landing Page"
+      content="Zerebralab"
       property="og:title"
     />
     <meta content="Inazuma" property="og:site_name" />
     <meta
-      content="Tailwind CSS Company Landing Page Template by Ranyeh."
+      content="Zerebralab"
       property="og:description"
     />
     <meta content="./assets/img/inazuma-cover.png" property="og:image" />
@@ -45,7 +45,7 @@
     <meta name="theme-color" content="#3d63dd" />
 
     <!-- Page title -->
-    <title>Inazuma | Tailwind CSS Company Landing Page</title>
+    <title>Zerebralab</title>
 
     <!-- Canonical -->
     <link rel="canonical" href="https://ranyeh24.github.io/inazuma-tailwind" />
@@ -255,7 +255,7 @@
               <div class="hidden sm:flex">
                 <a
                   href="javascript:void(0)"
-                  class="btn-navbar ml-5 px-6 py-3 rounded-md bg-primary-color bg-opacity-20 text-base font-medium text-primary-color hover:bg-opacity-100 hover:text-primary"
+                  class="video-popup flex items-center gap-4 rounded-md bg-primary-color/[0.15] px-5 py-3 text-base font-medium text-primary-color hover:bg-primary-color hover:text-primary md:px-7 md:py-[14px]"
                   role="button"
                   >Get Started</a
                 >
@@ -279,15 +279,13 @@
                 <h1
                   class="mb-6 text-3xl font-bold leading-snug text-primary-color sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight"
                 >
-                  Tailwind CSS Company Landing Page by Ranyeh
+                  Zerebralab
                 </h1>
 
                 <p
                   class="mx-auto mb-9 max-w-[600px] text-base text-primary-color sm:text-lg sm:leading-normal"
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Possimus qui impedit veniam, nesciunt nostrum vel repellat
-                  reprehenderit dignissimos harum, iste ex sit illo?
+                  Datos construyen relatos
                 </p>
 
                 <ul
@@ -296,7 +294,7 @@
                   <li>
                     <a
                       href="javascript:void(0)"
-                      class="inline-flex items-center justify-center rounded-md bg-primary-color text-primary px-5 py-3 text-center text-base font-medium shadow-md hover:bg-primary-light-5 md:px-7 md:py-[14px]"
+                      class="video-popup flex items-center gap-4 rounded-md bg-primary-color/[0.15] px-5 py-3 text-base font-medium text-primary-color hover:bg-primary-color hover:text-primary md:px-7 md:py-[14px]"
                       role="button"
                       >Get Started</a
                     >
@@ -311,7 +309,7 @@
                     >
                   </li>
                 </ul>
-
+<!--
                 <div>
                   <p class="mb-4 text-center text-primary-color">Powered by</p>
 
@@ -339,6 +337,7 @@
                     </a>
                   </div>
                 </div>
+                -->
               </div>
             </div>
             <div class="w-full px-5">
@@ -374,138 +373,88 @@
 
       <!-- About section -->
       <section id="about" class="section-area">
-        <div class="container">
-          <div class="grid grid-cols-1 gap-14 lg:grid-cols-2">
-            <div class="w-full">
-              <figure class="scroll-revealed max-w-[480px] mx-auto">
-                <img
-                  src="./assets/img/about-img.jpg"
-                  alt="About image"
-                  class="rounded-xl"
-                />
-              </figure>
-            </div>
+  <div class="container">
+    <div class="grid grid-cols-1 gap-14 lg:grid-cols-2">
+      <div class="w-full">
+        <figure class="scroll-revealed max-w-[480px] mx-auto">
+          <img
+            src="./assets/img/about-img.jpg"
+            alt="About image"
+            class="rounded-xl"
+          />
+        </figure>
+      </div>
 
-            <div class="w-full">
-              <div class="scroll-revealed">
-                <h6 class="mb-2 block text-lg font-semibold text-primary">
-                  About Us
-                </h6>
-                <h2 class="mb-6">
-                  Our team comes with the experience and knowledge
-                </h2>
-              </div>
+      <div class="w-full">
+        <div class="scroll-revealed">
+          <h6 class="mb-2 block text-lg font-semibold text-primary">
+            ¿Quiénes somos?
+          </h6>
+          <p>
+            Somos un grupo de consultores que transforma datos e información de valor, para generar impacto sostenible y construir relatos poderosos.
+          </p>
+        </div>
 
-              <div class="tabs scroll-revealed">
-                <nav
-                  class="tabs-nav flex flex-wrap gap-4 my-8"
-                  role="tablist"
-                  aria-label="About us tabs"
-                >
-                  <button
-                    type="button"
-                    class="tabs-link inline-block py-2 px-4 rounded-md text-body-light-12 dark:text-body-dark-12 bg-body-light-12/10 dark:bg-body-dark-12/10 text-inherit font-medium hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-                    data-web-toggle="tabs"
-                    data-web-target="tabs-panel-profile"
-                    id="tabs-list-profile"
-                    role="tab"
-                    aria-controls="tabs-panel-profile"
-                  >
-                    Our Profile
-                  </button>
+        <!-- Tabs -->
+        <div class="tabs scroll-revealed">
+          <nav class="tabs-nav flex flex-wrap gap-4 my-8">
+            <button
+              onclick="showTab('proposito')"
+              class="tab-btn bg-body-light-12/10 hover:bg-primary hover:text-white py-2 px-4 rounded-md font-medium"
+            >
+              Propósito
+            </button>
 
-                  <button
-                    type="button"
-                    class="tabs-link inline-block py-2 px-4 rounded-md text-body-light-12 dark:text-body-dark-12 bg-body-light-12/10 dark:bg-body-dark-12/10 text-inherit font-medium hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-                    data-web-toggle="tabs"
-                    data-web-target="tabs-panel-vision"
-                    id="tabs-list-vision"
-                    role="tab"
-                    aria-controls="tabs-panel-vision"
-                  >
-                    Our Vision
-                  </button>
+            <button
+              onclick="showTab('buscamos')"
+              class="tab-btn bg-body-light-12/10 hover:bg-primary hover:text-white py-2 px-4 rounded-md font-medium"
+            >
+              ¿Qué buscamos?
+            </button>
 
-                  <button
-                    type="button"
-                    class="tabs-link inline-block py-2 px-4 rounded-md text-body-light-12 dark:text-body-dark-12 bg-body-light-12/10 dark:bg-body-dark-12/10 text-inherit font-medium hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-                    data-web-toggle="tabs"
-                    data-web-target="tabs-panel-history"
-                    id="tabs-list-history"
-                    role="tab"
-                    aria-controls="tabs-panel-history"
-                  >
-                    Our History
-                  </button>
-                </nav>
+          
+          </nav>
 
-                <div
-                  class="tabs-content mt-4"
-                  id="tabs-panel-profile"
-                  tabindex="-1"
-                  role="tabpanel"
-                  aria-labelledby="tabs-list-profile"
-                >
-                  <p>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout. The point of using Lorem Ipsum is that it has a
-                    more-or-less normal distribution of letters, look like
-                    readable English.
-                  </p>
-                  <p>
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have in some form, by injected
-                    humour.
-                  </p>
-                </div>
-
-                <div
-                  class="tabs-content mt-4"
-                  id="tabs-panel-vision"
-                  tabindex="-1"
-                  role="tabpanel"
-                  aria-labelledby="tabs-list-vision"
-                >
-                  <p>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout. The point of using Lorem Ipsum is that it has a
-                    more-or-less normal distribution of letters, look like
-                    readable English.
-                  </p>
-                  <p>
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have in some form, by injected
-                    humour.
-                  </p>
-                </div>
-
-                <div
-                  class="tabs-content mt-4"
-                  id="tabs-panel-history"
-                  tabindex="-1"
-                  role="tabpanel"
-                  aria-labelledby="tabs-list-history"
-                >
-                  <p>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout. The point of using Lorem Ipsum is that it has a
-                    more-or-less normal distribution of letters, look like
-                    readable English.
-                  </p>
-                  <p>
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have in some form, by injected
-                    humour.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <!-- Tab content -->
+          <div class="tab-content text-body-light-11" id="tab-content">
+            <!-- Aquí se inserta el contenido dinámico -->
+            <p>Haz clic en una pestaña para ver su contenido.</p>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Script -->
+<script>
+  function showTab(tab) {
+    const content = document.getElementById("tab-content");
+
+    let html = "";
+    switch (tab) {
+      case "proposito":
+        html = `<p>Empoderar a las empresas mediante la integración de diversas inteligencias, permitiéndoles tomar decisiones informadas y estratégicas.</p><p>Proporcionar un análisis integral que aborde las necesidades complejasde nuestros clientes y brinde soluciones precisas y efectivas.</p>`;
+        break;
+      case "buscamos":
+         html = `
+    <p>Que las empresas logren:</p>
+    <ul class="list-disc list-inside mt-2 space-y-1">
+      <li>Fortalecer su reputación.</li>
+      <li>Descubrir nuevos giros de negocio.</li>
+      <li>Mejorar la relación de plataformas digitales.</li>
+      <li>Analizar y optimizar sus procesos internos.</li>
+      <li>Robustecer estrategias y programasde impacto social y ambiental.</li>
+      <li>Comunicación interna y externa.</li>
+    </ul>
+  `;
+        break;
+      
+    }
+
+    content.innerHTML = html;
+  }
+</script>
 
       <!-- Services section -->
       <section id="services" class="section-area">
