@@ -360,74 +360,96 @@
       </div>
 
       <div class="w-full">
-        <div class="scroll-revealed">
-          <h6 class="mb-2 block text-lg font-semibold text-primary">
-            ¿Quiénes somos?
-          </h6>
-          <p>
-            Somos un grupo de consultores que transforma datos e información de valor, para generar impacto sostenible y construir relatos poderosos.
-          </p>
-        </div>
-
-        <!-- Tabs -->
         <div class="tabs scroll-revealed">
-          <nav class="tabs-nav flex flex-wrap gap-4 my-8">
+          <nav class="tabs-nav flex flex-wrap gap-4 mb-8">
+            <button
+              onclick="showTab('quienes-somos')"
+              class="tab-btn py-2 px-4 rounded-md font-medium"
+              data-tab-name="quienes-somos"
+            >
+              ¿Quiénes somos?
+            </button>
+
             <button
               onclick="showTab('proposito')"
-              class="tab-btn bg-body-light-12/10 hover:bg-primary hover:text-white py-2 px-4 rounded-md font-medium"
+              class="tab-btn py-2 px-4 rounded-md font-medium"
+              data-tab-name="proposito"
             >
               Propósito
             </button>
 
             <button
               onclick="showTab('buscamos')"
-              class="tab-btn bg-body-light-12/10 hover:bg-primary hover:text-white py-2 px-4 rounded-md font-medium"
+              class="tab-btn py-2 px-4 rounded-md font-medium"
+              data-tab-name="buscamos"
             >
               ¿Qué buscamos?
             </button>
-
-          
           </nav>
 
-          <!-- Tab content -->
           <div class="tab-content" id="tab-content">
-            <!-- Aquí se inserta el contenido dinámico -->
-            
-          </div>
+            </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Script -->
 <script>
-  function showTab(tab) {
+  function showTab(tabName) {
     const content = document.getElementById("tab-content");
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    
+    tabButtons.forEach(button => {
+      button.classList.remove('bg-primary', 'text-white');
+      button.classList.add('bg-body-light-12/10', 'hover:bg-primary', 'hover:text-white');
+    });
+
+    const activeButton = document.querySelector(`.tab-btn[data-tab-name="${tabName}"]`);
+    if (activeButton) {
+      activeButton.classList.remove('bg-body-light-12/10', 'hover:bg-primary', 'hover:text-white');
+      activeButton.classList.add('bg-primary', 'text-white');
+    }
 
     let html = "";
-    switch (tab) {
+    switch (tabName) {
+      case "quienes-somos":
+        html = `
+          <h6 class="mb-2 block text-lg font-semibold text-primary">
+            ¿Quiénes somos?
+          </h6>
+          <p>
+            Somos un grupo de consultores que transforma datos e información de valor, para generar impacto sostenible y construir relatos poderosos.
+          </p>
+        `;
+        break;
       case "proposito":
-        html = `<p>Empoderar a las empresas mediante la integración de diversas inteligencias, permitiéndoles tomar decisiones informadas y estratégicas.</p><p>Proporcionar un análisis integral que aborde las necesidades complejas de nuestros clientes y brinde soluciones precisas y efectivas.</p>`;
+        html = `
+          <p>Empoderar a las empresas mediante la integración de diversas inteligencias, permitiéndoles tomar decisiones informadas y estratégicas.</p>
+          <p>Proporcionar un análisis integral que aborde las necesidades complejas de nuestros clientes y brinde soluciones precisas y efectivas.</p>
+        `;
         break;
       case "buscamos":
-         html = `
-        <p class="mb-4">Que las empresas logren:</p>
-        <ul class="list-disc list-inside space-y-1">
-        <li>-Fortalecer su reputación.</li>
-        <li>-Descubrir nuevos giros de negocio.</li>
-        <li>-Mejorar la relación de plataformas digitales.</li>
-        <li>-Analizar y optimizar sus procesos internos.</li>
-        <li>-Robustecer estrategias y programasde impacto social y ambiental.</li>
-        <li>-Comunicación interna y externa.</li>
-      </ul>
-  `;
+        html = `
+          <p class="mb-4">Que las empresas logren:</p>
+          <ul class="list-disc list-inside space-y-1">
+            <li>-Fortalecer su reputación.</li>
+            <li>-Descubrir nuevos giros de negocio.</li>
+            <li>--Mejorar la relación de plataformas digitales.</li>
+            <li>-Analizar y optimizar sus procesos internos.</li>
+            <li>-Robustecer estrategias y programas de impacto social y ambiental.</li>
+            <li>-Comunicación interna y externa.</li>
+          </ul>
+        `;
         break;
-      
     }
 
     content.innerHTML = html;
   }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    showTab('quienes-somos');
+  });
 </script>
 
       <!-- Services section -->
