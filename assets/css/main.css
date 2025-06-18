@@ -2092,7 +2092,9 @@ p + p{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-
+.text-justify {
+  text-align: justify;
+}
 .opacity-0{
   opacity: 0;
 }
