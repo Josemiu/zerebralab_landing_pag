@@ -45,7 +45,6 @@
     <meta name="theme-color" content="#3d63dd" />
 
     <!-- Page title -->
-     <im>
     <title>Zerebralab</title>
 
     <!-- Canonical -->
@@ -166,10 +165,10 @@
                 >
                   <li class="group relative">
                     <a
-                      href="#inicio"
+                      href="#Inicio"
                       class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 active"
                       role="menuitem"
-                      >inicio</a
+                      >Inicio</a
                     >
                   </li>
 
@@ -227,14 +226,14 @@
                 aria-label="Switch theme"
                 data-web-trigger="web-theme"
               ></button>
-              <div class="hidden sm:flex">
+              <!--<div class="hidden sm:flex">
                 <a
                   href="javascript:void(0)"
                   class="video-popup flex items-center gap-4 rounded-md bg-primary-color/[0.15] px-5 py-3 text-base font-medium text-primary-color hover:bg-primary-color hover:text-primary md:px-7 md:py-[14px]"
                   role="button"
                   >Get Started</a
                 >
-              </div>
+              </div>-->
             </div>
           </div>
         </div>
@@ -244,7 +243,7 @@
     <main class="main relative">
       <!-- Hero section -->
       <section
-        id="inicio"
+        id="Inicio"
         class="relative overflow-hidden bg-primary text-primary-color pt-[120px] md:pt-[130px] lg:pt-[160px]"
       >
         <div class="container">
@@ -262,7 +261,7 @@
                 >
                   Datos construyen relatos
                 </p>
-
+                <!--
                 <ul
                   class="mb-10 flex flex-wrap items-center justify-center gap-4 md:gap-5"
                 >
@@ -283,7 +282,7 @@
                       ><i class="lni lni-play text-lg/none"></i> Watch Intro</a
                     >
                   </li>
-                </ul>
+                </ul>-->
 <!--
                 <div>
                   <p class="mb-4 text-center text-primary-color">Powered by</p>
@@ -400,7 +399,7 @@
   function showTab(tabName) {
     const content = document.getElementById("tab-content");
     const tabButtons = document.querySelectorAll(".tab-btn");
-    
+
     tabButtons.forEach(button => {
       button.classList.remove('bg-primary', 'text-white');
       button.classList.add('bg-body-light-12/10', 'hover:bg-primary', 'hover:text-white');
@@ -436,7 +435,7 @@
           <ul class="list-disc list-inside space-y-1">
             <li>-Fortalecer su reputación.</li>
             <li>-Descubrir nuevos giros de negocio.</li>
-            <li>--Mejorar la relación de plataformas digitales.</li>
+            <li>-Mejorar la relación de plataformas digitales.</li>
             <li>-Analizar y optimizar sus procesos internos.</li>
             <li>-Robustecer estrategias y programas de impacto social y ambiental.</li>
             <li>-Comunicación interna y externa.</li>
@@ -1085,6 +1084,8 @@
         <figure class="group rounded-xl bg-body-light-1 dark:bg-body-dark-12/10 px-5 pb-10 pt-12 shadow-card-2 hover:shadow-lg hover:-translate-y-1 min-h-[520px]">
           <div class="relative z-10 mx-auto mb-5 h-[120px] w-[120px]">
             <img src="./assets/img/avatar/paul-simbal.jpg" alt="Paul Simball" class="h-full w-full rounded-full object-cover" />
+            <span class="absolute bottom-0 left-0 -z-10 h-10 w-10 rounded-full bg-red-500 opacity-0 group-hover:opacity-100"></span>
+            <span class="absolute top-0 right-0 -z-10 h-10 w-10 rounded-full bg-blue-500 opacity-0 group-hover:opacity-100" ></span>
           </div>
           <figcaption class="text-center block">
             <h4 class="mb-1 text-lg font-semibold text-body-light-12 dark:text-body-dark-12">PAUL SIMBALL</h4>
@@ -1101,6 +1102,9 @@
         <figure class="group rounded-xl bg-body-light-1 dark:bg-body-dark-12/10 px-5 pb-10 pt-12 shadow-card-2 hover:shadow-lg hover:-translate-y-1 min-h-[520px]">
           <div class="relative z-10 mx-auto mb-5 h-[120px] w-[120px]">
             <img src="./assets/img/avatar/rodrigo-castro.jpg" alt="Rodrigo Castro" class="h-full w-full rounded-full object-cover" />
+             <span
+              class="absolute bottom-0 left-0 -z-10 h-10 w-10 rounded-full bg-red-500 opacity-0 group-hover:opacity-100"></span>
+            <span class="absolute top-0 right-0 -z-10 h-10 w-10 rounded-full bg-blue-500 opacity-0 group-hover:opacity-100"></span>
           </div>
           <figcaption class="text-center block">
             <h4 class="mb-1 text-lg font-semibold text-body-light-12 dark:text-body-dark-12">RODRIGO CASTRO</h4>
@@ -1181,7 +1185,7 @@
           <div class="col-12 order-first lg:col-4">
             <div class="w-full">
               <a href="." class="inline-block mb-5">
-                <img src="./assets/img/zlab-text.svg" alt="Zerebralab logo" class="h-10" />
+                <img src="./assets/img/Zerebralab-logo-slogan.svg" alt="Zerebralab logo" class="h-10" />
               </a>
               <!--<a href="." class="inline-block mb-5">
                 <svg
