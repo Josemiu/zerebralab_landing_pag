@@ -1,6 +1,5 @@
-
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAJl001eotrACu8_qcvYLxrHVsWDcL2RFw",
@@ -15,8 +14,9 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 export async function guardarSuscriptor(correo) {
-  await addDoc(collection(db, "suscriptores"), {
-    correo,
+  const id = correo.toLowerCase(); // Evita mayúsculas duplicadas
+  await setDoc(doc(db, "suscriptores", id), {
+    correo: correo,
     fecha: new Date()
   });
 }
