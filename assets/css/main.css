@@ -243,6 +243,7 @@ button,
 input:where([type='button']),
 input:where([type='reset']),
 input:where([type='submit']) {
+  appearance: button;
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -290,6 +291,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 */
 
 [type='search'] {
+  appearance: button;
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -430,7 +432,7 @@ embed,
 object {
   display: block;
   /* 1 */
-  vertical-align: middle;
+  
   /* 2 */
 }
 
@@ -764,11 +766,14 @@ p + p{
 
 .container{
   width: 100%;
+  max-width: 100%sss; /* o 100% si prefieres algo fluido */
   margin-right: auto;
   margin-left: auto;
-  padding-right: 1.25rem;
-  padding-left: 1.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
 }
+
 
 @media (min-width: 640px){
   .container{
@@ -1059,6 +1064,8 @@ p + p{
   --tw-text-opacity: 1;
   color: rgb(98 99 108 / var(--tw-text-opacity));
 }
+
+
 
 .section-area:where([data-web-theme=dark], [data-web-theme=dark] *){
   --tw-text-opacity: 1;
@@ -1765,7 +1772,7 @@ p + p{
 
 .bg-primary{
   --tw-bg-opacity: 1;
-  background-color: rgb(255 110 0 / var(--tw-bg-opacity));
+  background-color: rgb(247 149 90/ var(--tw-bg-opacity));
 }
 
 .bg-primary-color{
@@ -2705,4 +2712,68 @@ p + p{
   animation: slideInBounce 0.8s ease-out 1;
   animation-delay: 1s;
   animation-fill-mode: both;
+}
+
+
+
+.logo-zerebralab {
+
+  max-width: 200px;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 300px;
+  perspective: 1000px;
+  justify-content: centers;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-front {
+  background-color: #1e293b; /* dark */
+  color: white;
+}
+
+.flip-card-front img.icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.flip-card-back {
+  background-color: #f97316; /* orange-500 */
+  color: white;
+  transform: rotateY(180deg);
 }

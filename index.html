@@ -14,7 +14,7 @@
       name="description"
       content="Zerebralab"
     />
-    <meta name="keywords" content="company" />
+    <meta name="keywords" content="zerebralab" />
     <meta
       name="twitter:title"
       content="Zerebralab"
@@ -50,42 +50,18 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://ranyeh24.github.io/inazuma-tailwind" />
 
-    <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="194x194"
-      href="./assets/favicon/favicon-194x194.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="./assets/favicon/android-chrome-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./assets/favicon/site.webmanifest.json" />
-    <link
-      rel="mask-icon"
-      href="./assets/favicon/safari-pinned-tab.svg"
-      color="#3d63dd"
-    />
+    <!-- Favicon SVG principal -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/zlab-icon.svg" />
+
+    <!-- PNG fallback para navegadores antiguos -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+
+    <!-- Web Manifest (opcional, si tienes PWA) -->
+    <!-- <link rel="manifest" href="./assets/favicon/site.webmanifest"> -->
 
     <!-- CSS Plugins -->
     <link
@@ -99,6 +75,7 @@
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
 
     <link rel="stylesheet" href="./assets/css/main.css" />
+    
   </head>
   <body>
     <!-- Page loading -->
@@ -240,7 +217,7 @@
       </div>
     </header>
 
-    <main class="main relative">
+    <main class="mx-auto max-w-7xl px-4">
       <!-- Hero section -->
       <section
         id="Inicio"
@@ -250,6 +227,7 @@
           <div class="-mx-5 flex flex-wrap items-center">
             <div class="w-full px-5">
               <div class="scroll-revealed mx-auto max-w-[780px] text-center">
+                <img src="./assets/img/zlab-logo.svg" alt="Zerebralab logo" class="logo-zerebralab mx-auto" />
                 <h1
                   class="mb-6 text-3xl font-bold leading-snug text-primary-color sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight"
                 >
@@ -261,6 +239,9 @@
                 >
                   Datos construyen relatos
                 </p>
+                <h2 class="mb-6 text-2xl font-bold leading-snug text-primary-color sm:text-3xl sm:leading-snug lg:text-4xl lg:leading-tight">
+                Decisiones brillantes, basadas en datos reales.
+                </h2>
                 <!--
                 <ul
                   class="mb-10 flex flex-wrap items-center justify-center gap-4 md:gap-5"
@@ -415,7 +396,6 @@
     switch (tabName) {
       case "quienes-somos":
         html = `
-          
           <p class="text-justify">
             Somos un grupo de consultores que transforma datos e información de valor, para generar impacto sostenible y construir relatos poderosos.
           </p>
@@ -449,81 +429,67 @@
     showTab('quienes-somos');
   });
 </script>
-
-      <!-- Services section -->
-      <section id="hacemos" class="section-area">
+      
+      <!-- Services section --> 
+      <section id="hacemos" class="section-area w-full max-w-screen-xl mx-auto px-4">
         <div class="container">
           <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
            <!-- <h6 class="mb-2 block text-lg font-semibold text-primary">
               Servicios
             </h6>-->
             <h2 class="mb-6">¿Cómo lo hacemos?</h2>
+        </div>
            
-          </div>
-
-          <div class="row">
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-              <div class="group hover:-translate-y-1">
-                <div
-                  class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center text-[37px]/none bg-primary text-primary-color"
-                >
-                  <img src="assets/img/inteligencia_negocios.jpg" alt="Descripción" class="w-[70px] h-[70px] rounded-2xl" />
-                </div>
-                <div class="w-full">
-                  <h4 class="text-[1.25rem]/tight font-semibold mb-5">
-                    Inteligencia de negocios
-                  </h4>
-                  <p class="text-justify">
-             La inteligencia de negocios es un conjunto de herramientas que se utilizan para recopilar, analizar, presentar y tomar decisiones basadas en datos empresariales.
-            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+              <!-- CARD 1 -->
+              <div class="flip-card group w-full">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="assets/img/inteligencia_negocios.jpg" alt="Negocios" class="icon mx-auto" />
+                    <h4 class="text-[1.25rem]/tight font-semibold mt-2 text-center">Inteligencia de negocios</h4>
+                  </div>
+                  <div class="flip-card-back">
+                    <p class="text-sm text-justify px-4">La inteligencia de negocios es un conjunto de herramientas que se utilizan para recopilar, analizar, presentar y tomar decisiones basadas en datos empresariales.</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-              <div class="group hover:-translate-y-1">
-                <div
-                  class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center text-[37px]/none bg-primary text-primary-color"
-                >
-                 <img src="assets/img/inteligencia_datos.jpg" alt="Descripción" class="w-[70px] h-[70px] rounded-2xl" />
-                </div>
-                <div class="w-full">
-                  <h4 class="text-[1.25rem]/tight font-semibold mb-5">
-                    Inteligencia de datos
-                  </h4>
-                 <p class="text-justify">Se centra en la recolección, procesamiento y análisis de grandes volúmenes de información para extraer patrones, tendencias y conocimientos ocultos.</p>
+              <!-- CARD 2 -->
+              <div class="flip-card group w-full">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="assets/img/inteligencia_datos.jpg" alt="Datos" class="icon mx-auto" />
+                    <h4 class="text-[1.25rem]/tight font-semibold mt-2 text-center">Inteligencia de datos</h4>
+                  </div>
+                  <div class="flip-card-back">
+                    <p class="text-sm text-justify px-4">Se centra en la recolección, procesamiento y análisis de grandes volúmenes de información para extraer patrones, tendencias y conocimientos ocultos.</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-              <div class="group hover:-translate-y-1">
-                <div
-                  class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center text-[37px]/none bg-primary text-primary-color"
-                >
-                  <img src="assets/img/inteligencia_comunicacional.jpg" alt="Descripción" class="w-[70px] h-[70px] rounded-2xl" />
-                </div>
-                <div class="w-full">
-                  <h4 class="text-[1.25rem]/tight font-semibold mb-5">
-                   Inteligencia comucacional
-                  </h4>
-                 <p class="text-justify">Es la aplicación del análisis de datos para comprender, optimizar y medir la efectividad de las interacciones y flujos de comunicación.</p>
+              <!-- CARD 3 -->
+              <div class="flip-card group w-full">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="assets/img/inteligencia_comunicacional.jpg" alt="Comunicacional" class="icon mx-auto" />
+                    <h4 class="text-[1.25rem]/tight font-semibold mt-2 text-center">Inteligencia comunicacional</h4>
+                  </div>
+                  <div class="flip-card-back">
+                    <p class="text-sm text-justify px-4">Es la aplicación del análisis de datos para comprender, optimizar y medir la efectividad de las interacciones y flujos de comunicación.</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-              <div class="group hover:-translate-y-1">
-                <div
-                  class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center text-[37px]/none bg-primary text-primary-color"
-                >
-                  <img src="assets/img/inteligencia_sostenibilidad.jpg" alt="Descripción" class="w-[70px] h-[70px] rounded-2xl" />
-                </div>
-                <div class="w-full">
-                  <h4 class="text-[1.25rem]/tight font-semibold mb-5">
-                    Inteligencia de sostenibilidad
-                  </h4>
-                 <p class="text-justify">Involucra el uso de datos y análisis para evaluar, gestionar y mejorar el impacto social, ambiental y económico de las operaciones empresariales.</p>
+              <!-- CARD 4 -->
+              <div class="flip-card group w-full">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="assets/img/inteligencia_sostenibilidad.jpg" alt="Sostenibilidad" class="icon mx-auto" />
+                    <h4 class="text-[1.25rem]/tight font-semibold mt-2 text-center">Inteligencia de sostenibilidad</h4>
+                  </div>
+                  <div class="flip-card-back">
+                    <p class="text-sm text-justify px-4">Involucra el uso de datos y análisis para evaluar, gestionar y mejorar el impacto social, ambiental y económico de las operaciones empresariales.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -600,6 +566,7 @@
           </div>
         </div>
       </section>-->
+      
 
       <!-- Portfolio section -->
       <section id="Servicios" class="section-area">
@@ -1047,7 +1014,7 @@
 
        
       <!-- Contact section -->
-      <section id="contacto" class="section-area mb-16">
+    <section id="contacto" class="section-area mb-16">
   <div class="container">
     <div class="row justify-center">
       <!-- Contacto -->
@@ -1101,7 +1068,7 @@
           data="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3986.9317597592453!2d-79.9471113250323!3d-2.1796039978010615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMsKwMTAnNDYuNiJTIDc5wrA1Nic0MC4zIlc!5e0!3m2!1ses!2sec!4v1750179240633!5m2!1ses!2sec" class="border-0 w-full h-full"
         ></object>
       </section>
-      
+
       <!-- Newsletter Section -->
       <section id="newsletter" class="section-area bg-primary text-gray-900 dark:text-primary-color py-16">
         <div class="container max-w-xl mx-auto text-center">
@@ -1120,10 +1087,15 @@
               class="tab-btn py-2 px-4 rounded-md font-medium">
               Suscribirme
             </button>
+          <div class="container max-w-2xl mx-auto">
+            <h2 class="text-2xl font-semibold mb-6 text-center">Boletines anteriores</h2>
+          <div id="newsletter-list" class="space-y-4"></div>
+        </div>
           </form>
           <p id="mensaje-newsletter" class="mt-4 text-white hidden">¡Gracias por suscribirte!</p>
         </div>
-      </section>      
+      </section>
+            
     </main>
  
                 
@@ -1187,6 +1159,8 @@
       <div class="container py-8">
         <div class="flex flex-wrap">
           <div class="w-full md:w-1/2">
+    <p class="text-sm text-jusufi-light-11 dark:text-body-dark-11">
+      © 2024 Zerebralab. Todos los derechos reservados.
 
     <!--<button
       type="button"
@@ -1203,7 +1177,7 @@
 
     <script type="module">
       import "./assets/js/main.js";
-      import { guardarSuscriptor } from "./assets/js/firebase-newsletter.js";
+      import { guardarSuscriptor } from "./assets/js/firebase.js";
 
       const form = document.getElementById("form-newsletter");
       const mensaje = document.getElementById("mensaje-newsletter");
@@ -1211,7 +1185,7 @@
       if (form) {
         form.addEventListener("submit", async (e) => {
           e.preventDefault();
-          const correo = document.getElementById("correo").value.trim();
+          const correo = document.getElementById("correo").value.trim();sss
 
           if (!correo.endsWith("@gmail.com")) {
             alert("Solo se permiten correos Gmail.");
