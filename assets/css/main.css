@@ -2726,7 +2726,7 @@ p + p{
 
 .flip-card {
   background-color: transparent;
-  width: 100%;
+  width: 400px;
   height: 300px;
   perspective: 1000px;
   justify-content: centers;
