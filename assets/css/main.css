@@ -1786,7 +1786,7 @@ p + p{
 
 .bg-primary-dark-2{
   --tw-bg-opacity: 1;
-  background-color: rgb(230 93 0 / var(--tw-bg-opacity));
+  background-color: rgb(230 185 137 / var(--tw-bg-opacity));
 }
 
 .bg-primary-light-1{
@@ -2761,7 +2761,7 @@ p + p{
 }
 
 .flip-card-front {
-  background-color: #1e293b; /* dark */
+  background-color: #ff9100; /* dark */
   color: white;
 }
 

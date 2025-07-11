@@ -212,16 +212,22 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         contenedor.innerHTML = "";
 
-        boletines.forEach(b => {
+      boletines
+        .sort((a, b) => new Date(b.fecha) - new Date(a.fecha)) // orden descendente por fecha
+        .forEach(b => {
           const div = document.createElement("div");
-          div.className = "bg-white p-4 shadow rounded";
+          div.className = "bg-white p-4 shadow rounded text-left";
+
           div.innerHTML = `
-            <h3 class="text-lg font-bold">${b.titulo}</h3>
-            <p class="text-sm text-gray-500">Publicado: ${b.fecha}</p>
-            <a href="${b.url}" target="_blank" class="text-blue-600 underline">Ver boletín</a>
+            <h3 class="text-lg font-semibold">${b.titulo}</h3>
+            <p class="text-sm text-gray-600 mb-2">Publicado: ${b.fecha}</p>
+            <p class="text-sm text-gray-800 mb-2">${b.extracto ?? "Resumen no disponible."}</p>
+            <a href="${b.link}" target="_blank" class="text-blue-600 hover:underline">Ver boletín completo</a>
           `;
+
           contenedor.appendChild(div);
         });
+
       } catch (err) {
         contenedor.innerHTML = `<p class="text-red-600">Error al cargar boletines.</p>`;
         console.error("Error al obtener newsletters:", err);
