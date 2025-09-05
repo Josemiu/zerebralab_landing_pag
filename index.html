@@ -1069,32 +1069,35 @@
         ></object>
       </section>
 
-      <!-- Newsletter Section -->
-      <section id="newsletter" class="section-area bg-primary text-gray-900 dark:text-primary-color py-16">
-        <div class="container max-w-xl mx-auto text-center">
-          <h2 class="text-3xl font-semibold mb-4">Suscríbete a nuestro Newsletter</h2>
-          <p >Recibe contenido útil y novedades directamente en tu correo Gmail.</p>
-          <form id="form-newsletter" class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <input
-              type="email"
-              id="correo"
-              required
-              placeholder="Tu correo @gmail.com"
-              class="w-full sm:w-2/3 px-4 py-2 text-primary-color rounded-md focus:outline-none focus:ring-2 focus:ring-white"
-            />
-            <button
-              type="submit" 
-              class="tab-btn py-2 px-4 rounded-md font-medium">
-              Suscribirme
-            </button>
-          <div class="container max-w-2xl mx-auto">
-            <h2 class="text-2xl font-semibold mb-6 text-center">Boletines anteriores</h2>
-          <div id="newsletter-list" class="space-y-4"></div>
-        </div>
-          </form>
-          <p id="mensaje-newsletter" class="mt-4 text-white hidden">¡Gracias por suscribirte!</p>
-        </div>
-      </section>
+<!-- Newsletter Section -->
+<section id="newsletter" class="section-area bg-primary text-gray-900 dark:text-primary-color py-16">
+  <div class="container max-w-xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold mb-4">Suscríbete a nuestro Newsletter</h2>
+    <p>Recibe contenido útil y novedades directamente en tu correo Gmail.</p>
+
+    <form id="form-newsletter" class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6">
+      <input
+        type="email"
+        id="correo"
+        required
+        placeholder="Tu correo @gmail.com"
+        class="w-full sm:w-2/3 px-4 py-2 text-primary-color rounded-md focus:outline-none focus:ring-2 focus:ring-white"
+      />
+      <button type="submit" class="tab-btn py-2 px-4 rounded-md font-medium">
+        Suscribirme
+      </button>
+    </form>
+
+    <p id="mensaje-newsletter" class="mt-4 text-white hidden">¡Gracias por suscribirte!</p>
+
+    <div class="container max-w-2xl mx-auto mt-10">
+      <h2 class="text-2xl font-semibold mb-6 text-center">Boletines anteriores</h2>
+      <div id="newsletter-list" class="space-y-4"></div>
+      <p id="error-boletines" class="text-red-600 mt-4 hidden">Error al cargar boletines.</p>
+    </div>
+  </div>
+</section>
+
             
     </main>
  

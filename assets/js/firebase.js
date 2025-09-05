@@ -16,7 +16,7 @@ const db = getFirestore(app);
 
 // 🔽 Función para guardar correos de suscripción
 export async function guardarSuscriptor(correo) {
-  const id = correo.toLowerCase();
+  const id = correo.toLowerCase();  
   await setDoc(doc(db, "suscriptores", id), {
     correo: correo,
     fecha: new Date()
